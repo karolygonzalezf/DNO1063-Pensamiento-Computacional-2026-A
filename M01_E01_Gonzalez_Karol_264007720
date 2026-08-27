@@ -1,0 +1,513 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python",
+      "version": "3.10.0"
+    },
+    "colab": {
+      "provenance": []
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "id": "3f2f5c6b",
+      "metadata": {
+        "id": "3f2f5c6b"
+      },
+      "source": [
+        "# M01_E01_Python_Introduccion\n",
+        "\n",
+        "### PENSAMIENTO COMPUTACIONAL\n",
+        "\n",
+        "- Prof. Francisco Rebolledo / Rodrigo Vera - Escuela de Diseño Universidad Católica de Chile.\n",
+        "\n",
+        "- Renombrar archivo: `M01_E01_apellido_nombre_rut`\n",
+        "\n",
+        "En este ejercicio veremos los conceptos básicos de Python: variables, decisiones, ciclos y listas.\n",
+        "\n",
+        "- A - Variables y tipos de datos\n",
+        "- B - Decisiones (if/else)\n",
+        "- C - Ciclos (for)\n",
+        "- D - Listas\n",
+        "- E - Recorrer listas"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "0a256cca",
+      "metadata": {
+        "id": "0a256cca"
+      },
+      "source": [
+        "## A - Variables y tipos de datos\n",
+        "\n",
+        "Una variable es un nombre con el que guardamos un valor para usarlo después.\n",
+        "\n",
+        "Los tipos de datos más comunes son:\n",
+        "\n",
+        "- `int`: números enteros como 42, -3\n",
+        "- `float`: números decimales como 2.87, 3.14\n",
+        "- `str`: texto entre comillas como \"hola\", \"Python\"\n",
+        "- `bool`: valores lógicos, True o False\n",
+        "\n",
+        "Se pueden hacer operaciones aritméticas con números: `+`, `-`, `*`, `/`.\n",
+        "Para saber el tipo de un valor se usa `type()`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "797d94bd",
+      "metadata": {
+        "id": "797d94bd",
+        "outputId": "921dcbcc-7c79-44ad-88f8-2a40a98ce79c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Ejemplo A - variables y operaciones\n",
+        "nombre = \"Ana\"\n",
+        "edad   = 21\n",
+        "altura = 1.65\n",
+        "\n",
+        "print( nombre )\n",
+        "print( edad + 5 )   # operación aritmética\n",
+        "print( type(edad) ) # int"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ana\n",
+            "26\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "c9614f38",
+      "metadata": {
+        "id": "c9614f38"
+      },
+      "source": [
+        "## B - Decisiones (if/else)\n",
+        "\n",
+        "El computador puede tomar decisiones según si una condición es verdadera o falsa.\n",
+        "\n",
+        "La estructura básica es `if condición:` seguido del bloque a ejecutar si es verdadero, y `else:` para el caso contrario.\n",
+        "\n",
+        "Operadores de comparación: `==` igual, `!=` distinto, `>` mayor, `<` menor."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "9538344f",
+      "metadata": {
+        "id": "9538344f",
+        "outputId": "342165e0-a335-43fc-8bae-935dedb2f049",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Ejemplo B - decisión con if/else\n",
+        "a = 3\n",
+        "\n",
+        "if a == 5:\n",
+        "    print( \"a vale 5\" )\n",
+        "else:\n",
+        "    print( \"a NO vale 5\" )"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a NO vale 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "5ac58225",
+      "metadata": {
+        "id": "5ac58225"
+      },
+      "source": [
+        "## C - Ciclos (for)\n",
+        "\n",
+        "Un ciclo `for` repite instrucciones una cantidad determinada de veces.\n",
+        "\n",
+        "`range(n)` genera los números desde 0 hasta n-1. La variable del ciclo toma cada uno de esos valores en cada repetición."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "ea38c3c0",
+      "metadata": {
+        "id": "ea38c3c0",
+        "outputId": "ca0bc166-46e2-48e2-9d4a-a5c4b179dfc9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Ejemplo C - ciclo for con range\n",
+        "for i in range( 6 ):\n",
+        "    print( \"i vale:\", i )"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "i vale: 0\n",
+            "i vale: 1\n",
+            "i vale: 2\n",
+            "i vale: 3\n",
+            "i vale: 4\n",
+            "i vale: 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "bbe5ac3c",
+      "metadata": {
+        "id": "bbe5ac3c"
+      },
+      "source": [
+        "## D - Listas\n",
+        "\n",
+        "Una lista guarda varios valores bajo un mismo nombre. Cada elemento tiene una posición llamada index, que parte en 0.\n",
+        "\n",
+        "Para acceder a un elemento: `lista[index]`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "75870434",
+      "metadata": {
+        "id": "75870434",
+        "outputId": "07ab5372-d3d4-4ff1-c6e7-561072a64175",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Ejemplo D - lista y acceso por index\n",
+        "nombres = [\"Ana\", \"Beatriz\", \"Claudia\", \"Diana\", \"Elvira\"]\n",
+        "\n",
+        "print( nombres[0] )  # primer elemento\n",
+        "print( nombres[4] )  # quinto elemento"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ana\n",
+            "Elvira\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "ccea3f25",
+      "metadata": {
+        "id": "ccea3f25"
+      },
+      "source": [
+        "## E - Recorrer listas\n",
+        "\n",
+        "Se puede recorrer una lista con un ciclo `for`. `len(lista)` entrega la cantidad de elementos de la lista.\n",
+        "\n",
+        "Hay dos formas: recorrer con índices usando `range(len(lista))`, o recorrer directamente los elementos."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "5cc008ff",
+      "metadata": {
+        "id": "5cc008ff",
+        "outputId": "768bfd8e-3203-4a75-e722-2bd15f2bedc6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Ejemplo E - recorrer lista con índices\n",
+        "nombres = [\"Ana\", \"Beatriz\", \"Claudia\", \"Diana\", \"Elvira\"]\n",
+        "\n",
+        "for i in range( len(nombres) ):\n",
+        "    print( i, nombres[i] )"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0 Ana\n",
+            "1 Beatriz\n",
+            "2 Claudia\n",
+            "3 Diana\n",
+            "4 Elvira\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "5a0a18c1",
+      "metadata": {
+        "id": "5a0a18c1"
+      },
+      "source": [
+        "## Ahora Usted:\n",
+        "\n",
+        "Recuerde que puede crear las celdas que necesite."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "914705e1",
+      "metadata": {
+        "id": "914705e1"
+      },
+      "source": [
+        "### 1 - Concatenar nombres (1 punto)\n",
+        "\n",
+        "Cree dos variables, `nomb` y `apell`, y guarde en ellas su nombre y apellido. Luego concaténelas e imprima el resultado con `print`. Recuerde que los textos son strings y van entre comillas."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "1b3afa46",
+      "metadata": {
+        "id": "1b3afa46",
+        "outputId": "ed61d59d-8384-4ec7-9943-58ac4598aee2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Su respuesta desde acá.\n",
+        "nomb = \"Karol\"\n",
+        "apell = \"González\"\n",
+        "\n",
+        "print(nomb + \" \" + apell)"
+      ],
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Karol González\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "4390125c",
+      "metadata": {
+        "id": "4390125c"
+      },
+      "source": [
+        "### 2 - Lista de amigos (1 punto)\n",
+        "\n",
+        "Haga una lista con 5 elementos: pueden ser nombres de amigos, cantantes, mascotas, lo que estime. Recórrala con un ciclo `for` y muestre cada elemento con `print`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "546a5ead",
+      "metadata": {
+        "id": "546a5ead",
+        "outputId": "833060cd-2210-4baa-d5c0-66dea0f63b23",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Su respuesta desde acá.\n",
+        "amigos = [\"Fernanda\", \"Victoria\", \"Martín\", \"Oscar\", \"Benjamín\"]\n",
+        "\n",
+        "for amigo in amigos:\n",
+        "  print(amigo)"
+      ],
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Fernanda\n",
+            "Victoria\n",
+            "Martín\n",
+            "Oscar\n",
+            "Benjamín\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "ba95c58a",
+      "metadata": {
+        "id": "ba95c58a"
+      },
+      "source": [
+        "### 3 - Lista de edades (1 punto)\n",
+        "\n",
+        "Haga una lista con 5 edades ficticias. Recórrala con un ciclo `for` y muestre cada elemento con `print`."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "c12e7dc8",
+      "metadata": {
+        "id": "c12e7dc8",
+        "outputId": "865c7c40-1652-40cf-ad69-7dee5d5de7aa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Su respuesta desde acá.\n",
+        "edades = [6, 7, 67, 22, 16]\n",
+        "\n",
+        "for edad in edades:\n",
+        "  print(edad)"
+      ],
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "6\n",
+            "7\n",
+            "67\n",
+            "22\n",
+            "16\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "94c6b7ac",
+      "metadata": {
+        "id": "94c6b7ac"
+      },
+      "source": [
+        "### 4 - Sumar números del RUT (1 punto)\n",
+        "\n",
+        "Ponga los números de su RUT en una lista, sumelos usando un ciclo `for` con una variable acumuladora, y muestre el resultado con el mensaje `\"Mi rut suma: \"` seguido del total."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "edc18786",
+      "metadata": {
+        "id": "edc18786",
+        "outputId": "951a6513-4628-40d2-df54-65a662eb59ba",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Su respuesta desde acá.\n",
+        "rut_num = [2, 6, 4, 0, 0, 7, 7, 2]  # completar con sus números\n",
+        "\n",
+        "suma = 0\n",
+        "for i in range( len(rut_num) ):\n",
+        "    suma = suma + rut_num[i]\n",
+        "\n",
+        "print( \"Mi rut suma:\", suma )\n"
+      ],
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mi rut suma: 28\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "id": "3742e664",
+      "metadata": {
+        "id": "3742e664"
+      },
+      "source": [
+        "### 5 - Evaluar cantidad de animalitos con if (2 puntos)\n",
+        "\n",
+        "Complete el código con los valores que correspondan para que el resultado sea:\n",
+        "\n",
+        "Hay más gatitos, son: 12\n",
+        "\n",
+        "El total de animalitos es: 36"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "id": "1eb161e9",
+      "metadata": {
+        "id": "1eb161e9",
+        "outputId": "5dc07637-d82a-4a9d-a1c6-8013f4f3344e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Su respuesta desde acá.\n",
+        "gatitos  = 12   # completar\n",
+        "perritos = 24\n",
+        "\n",
+        "if gatitos > perritos:\n",
+        "    print( \"Hay más perritos, son:\", gatitos )\n",
+        "else:\n",
+        "    print( \"Hay más gatitos, son:\", perritos )\n",
+        "\n",
+        "tot = gatitos + perritos\n",
+        "print( \"El total de animalitos es:\", tot )\n"
+      ],
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hay más gatitos, son: 24\n",
+            "El total de animalitos es: 36\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
