@@ -12,10 +12,21 @@
       "version": "3.10.0"
     },
     "colab": {
-      "provenance": []
+      "provenance": [],
+      "include_colab_link": true
     }
   },
   "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/karolygonzalezf/DNO1063-Pensamiento-Computacional-2026-A/blob/main/M01_E01_Gonzalez_Karol_264007720\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
     {
       "cell_type": "markdown",
       "id": "3f2f5c6b",
@@ -66,11 +77,11 @@
       "cell_type": "code",
       "id": "797d94bd",
       "metadata": {
-        "id": "797d94bd",
-        "outputId": "921dcbcc-7c79-44ad-88f8-2a40a98ce79c",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "797d94bd",
+        "outputId": "921dcbcc-7c79-44ad-88f8-2a40a98ce79c"
       },
       "source": [
         "# Ejemplo A - variables y operaciones\n",
@@ -115,11 +126,11 @@
       "cell_type": "code",
       "id": "9538344f",
       "metadata": {
-        "id": "9538344f",
-        "outputId": "342165e0-a335-43fc-8bae-935dedb2f049",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "9538344f",
+        "outputId": "342165e0-a335-43fc-8bae-935dedb2f049"
       },
       "source": [
         "# Ejemplo B - decisión con if/else\n",
@@ -159,11 +170,11 @@
       "cell_type": "code",
       "id": "ea38c3c0",
       "metadata": {
-        "id": "ea38c3c0",
-        "outputId": "ca0bc166-46e2-48e2-9d4a-a5c4b179dfc9",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "ea38c3c0",
+        "outputId": "ca0bc166-46e2-48e2-9d4a-a5c4b179dfc9"
       },
       "source": [
         "# Ejemplo C - ciclo for con range\n",
@@ -204,11 +215,11 @@
       "cell_type": "code",
       "id": "75870434",
       "metadata": {
-        "id": "75870434",
-        "outputId": "07ab5372-d3d4-4ff1-c6e7-561072a64175",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "75870434",
+        "outputId": "07ab5372-d3d4-4ff1-c6e7-561072a64175"
       },
       "source": [
         "# Ejemplo D - lista y acceso por index\n",
@@ -247,11 +258,11 @@
       "cell_type": "code",
       "id": "5cc008ff",
       "metadata": {
-        "id": "5cc008ff",
-        "outputId": "768bfd8e-3203-4a75-e722-2bd15f2bedc6",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "5cc008ff",
+        "outputId": "768bfd8e-3203-4a75-e722-2bd15f2bedc6"
       },
       "source": [
         "# Ejemplo E - recorrer lista con índices\n",
@@ -303,11 +314,11 @@
       "cell_type": "code",
       "id": "1b3afa46",
       "metadata": {
-        "id": "1b3afa46",
-        "outputId": "ed61d59d-8384-4ec7-9943-58ac4598aee2",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "1b3afa46",
+        "outputId": "ed61d59d-8384-4ec7-9943-58ac4598aee2"
       },
       "source": [
         "# Su respuesta desde acá.\n",
@@ -343,11 +354,11 @@
       "cell_type": "code",
       "id": "546a5ead",
       "metadata": {
-        "id": "546a5ead",
-        "outputId": "833060cd-2210-4baa-d5c0-66dea0f63b23",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "546a5ead",
+        "outputId": "833060cd-2210-4baa-d5c0-66dea0f63b23"
       },
       "source": [
         "# Su respuesta desde acá.\n",
@@ -387,11 +398,11 @@
       "cell_type": "code",
       "id": "c12e7dc8",
       "metadata": {
-        "id": "c12e7dc8",
-        "outputId": "865c7c40-1652-40cf-ad69-7dee5d5de7aa",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "c12e7dc8",
+        "outputId": "865c7c40-1652-40cf-ad69-7dee5d5de7aa"
       },
       "source": [
         "# Su respuesta desde acá.\n",
@@ -431,11 +442,11 @@
       "cell_type": "code",
       "id": "edc18786",
       "metadata": {
-        "id": "edc18786",
-        "outputId": "951a6513-4628-40d2-df54-65a662eb59ba",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "edc18786",
+        "outputId": "951a6513-4628-40d2-df54-65a662eb59ba"
       },
       "source": [
         "# Su respuesta desde acá.\n",
@@ -478,11 +489,11 @@
       "cell_type": "code",
       "id": "1eb161e9",
       "metadata": {
-        "id": "1eb161e9",
-        "outputId": "5dc07637-d82a-4a9d-a1c6-8013f4f3344e",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "id": "1eb161e9",
+        "outputId": "5dc07637-d82a-4a9d-a1c6-8013f4f3344e"
       },
       "source": [
         "# Su respuesta desde acá.\n",
